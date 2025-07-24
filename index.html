@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bear Ninja Hunter - Prototype</title>
+</head>
+<body>
+  <!-- Placeholder paragraph to be replaced by JS -->
+  <p id="demo">Replace this content with the calculated sum</p>
+
+  <script>
+    // Prompt user for name
+    let uname = prompt('Welcome to Bear Ninja Hunter! Enter if you dare. To continue, please enter your name: ');
+
+    // Create a message using the user's input (template literal + string concat)
+    let introMessage = `You have entered: ${uname}`;
+    console.log(introMessage + ' this is an example of a hardcoded text string concatenated after a variable.');
+
+    // Prompt user for their game choice
+    let userChoice = prompt('Choose Bear, Ninja, or Hunter:');
+
+    // Assign the computer's move as "Bear" (hardcoded for prototype)
+    let computerChoice = 'Bear';
+
+    // Concatenate a welcome message
+    let welcomeMsg = "Welcome " + uname + "!";
+
+    // Concatenate the game choices summary
+    let resultMsg = "You chose " + userChoice + ", and the computer chose " + computerChoice + ".";
+
+    // Use innerHTML to replace content in the page (snippet 2)
+    document.getElementById('demo').innerHTML = welcomeMsg + " " + resultMsg;
+
+    // Use console log with mixed template literal and concatenation (snippet 3)
+    console.log(`${uname}, Another text string ` + userChoice + "!");
+
+    // Use alert to show a message (snippet 4)
+    alert(welcomeMsg + " " + resultMsg);
+
+    // Example: numeric output using innerHTML (snippet 5)
+    document.getElementById("demo").innerHTML += "<br>Also, 3 + 8 = " + (3 + 8);
+
+  </script>
+</body>
+</html>
